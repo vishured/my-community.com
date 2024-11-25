@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+</head>
+<body>
+    <h1>Food Ads</h1>
+    <p>Vendors can post their ads here.</p>
+</body>
+</html>
+
+<h2>Post Your Food Ad</h2>
+<form id="foodForm">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required><br><br>
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+    <button type="submit">Post Ad</button>
+</form>
+<h2>Food Ads</h2>
+<div id="adsContainer"></div>
+
+<script>
+    document.getElementById('foodForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const title = document.getElementById('title').value;
+        const description = document.getElementById('description').value;
+
+        const adContainer = document.createElement('div');
+        adContainer.innerHTML = `<h3>${title}</h3><p>${description}</p><hr>`;
+        document.getElementById('adsContainer').appendChild(adContainer);
+
+        // Clear form
+        document.getElementById('foodForm').reset();
+    });
+</script>
+
+
+<nav style="background-color: #343a40; color: white; padding: 10px;">
+    <a href="index.html" style="margin-right: 20px; color: white; text-decoration: none;">Home</a>
+    <a href="food.html" style="margin-right: 20px; color: white; text-decoration: none;">Food</a>
+    <a href="pool.html" style="margin-right: 20px; color: white; text-decoration: none;">Pool</a>
+    <a href="services.html" style="margin-right: 20px; color: white; text-decoration: none;">Services</a>
+    <a href="other.html" style="color: white; text-decoration: none;">Other</a>
+</nav>
+
+
+
+<style>
+    body {
+        background: url('food-background.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+    }
+</style>

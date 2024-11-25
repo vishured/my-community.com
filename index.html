@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            gap: 20px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        .food { background-color: #FF5733; }
+        .pool { background-color: #3498DB; }
+        .services { background-color: #2ECC71; }
+        .other { background-color: #9B59B6; }
+        a { text-decoration: none; color: white; }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        height: 150px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .food { background-color: #FF5733; }
+    .pool { background-color: #3498DB; }
+    .services { background-color: #2ECC71; }
+    .other { background-color: #9B59B6; }
+
+    a {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        .box {
+            height: 100px;
+            font-size: 1em;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box food"><a href="food.html">Food</a></div>
+        <div class="box pool"><a href="pool.html">Pool</a></div>
+        <div class="box services"><a href="services.html">Services</a></div>
+        <div class="box other"><a href="other.html">Other</a></div>
+    </div>
+</body>
+</html>
